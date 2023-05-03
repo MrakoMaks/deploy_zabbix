@@ -2,8 +2,8 @@
 
 read -e -p "Введите IP или домен Zabbix: " ZABBIX
 read -e -p "Введите имя этого узла в Zabbix: " SERVERNAME
-wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest%2Bubuntu20.04_all.deb
-zabbix-release_latest+ubuntu20.04_all.deb
+wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest%2Bubuntu22.04_all.deb
+dpkg -i zabbix-release_latest+ubuntu22.04_all.deb
 apt update
 apt install zabbix-agent2
 systemctl enable zabbix-agent2 --now
